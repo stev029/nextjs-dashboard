@@ -1,4 +1,18 @@
 {
     "IDX.aI.enableInlineCompletion": true,
-    "IDX.aI.enableCodebaseIndexing": true
+    "IDX.aI.enableCodebaseIndexing": true,
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "PostgreSQL",
+            "connectString": "postgres://neondb_owner:npg_qNzl1wK8fUVn@ep-wandering-hill-a1cq4y3d-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require",
+            "name": "Neon (vercel)"
+        }
+    ]
 }
