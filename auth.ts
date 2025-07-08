@@ -10,8 +10,7 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 async function getUser(email: string): Promise<User | undefined> {
     try {
-        const user = await sql<User>`SELECT * FROM users WHERE email=${email}`;
-        console.log(user);
+        const user = await sql`SELECT * FROM users WHERE email=${email}` as User[];
         return user[0];
     } catch (error) {
         console.error('Failed to fetch user:', error);
